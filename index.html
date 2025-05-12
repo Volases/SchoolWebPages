@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #00c3ff;
+            --secondary: #ff6ec4;
+            --accent: #f9d423;
+            --bg: #f5f7fa;
+            --white: #fff;
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+        }
+        .container {
+            background: var(--bg);
+            margin: 40px 0;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            padding: 40px 32px 32px 32px;
+            max-width: 600px;
+            width: 95%;
+            animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) both;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        h1.top_title {
+            font-size: 2.8rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            animation: gradientMove 3s infinite linear alternate;
+        }
+        @keyframes gradientMove {
+            0% {background-position: 0%;}
+            100% {background-position: 100%;}
+        }
+        .info {
+            margin: 0 0 24px 0;
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.6;
+            animation: fadeIn 1.2s 0.2s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        h1.secondary_title {
+            font-size: 1.4rem;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            color: var(--white);
+            padding: 12px 0;
+            border-radius: 20px;
+            margin: 32px 0 18px 0;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+            animation: fadeIn 1.2s 0.4s both;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 12px;
+            margin: 0 auto;
+            animation: fadeIn 1.2s 0.6s both;
+        }
+        td {
+            background: var(--white);
+            border: none;
+            border-radius: 16px;
+            padding: 16px 18px;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+        tr:hover td {
+            transform: scale(1.03) translateY(-2px);
+            box-shadow: 0 6px 18px 0 rgba(0,0,0,0.13);
+            background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+            color: #fff;
+        }
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        tr:hover a {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 6px 18px 6px;
+            }
+            h1.top_title {
+                font-size: 2rem;
+            }
+            h1.secondary_title {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+            td {
+                font-size: 0.98rem;
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="top_title">Presentación</h1>
+        <div class="info">
+            <p>Marcelo Isaac Barraza Lucero</p>
+            <p>Estudiante de la carrera de Informática</p>
+            <p>Conalep Costa Rica</p>
+            <p>Grupo 612 - Sexto Semestre</p>
+            <p>Materia: Diseño y Elaboración de Páginas Web</p>
+        </div>
+        <h1 class="secondary_title">Menú de Prácticas</h1>
+        <table>
+            <tr>
+                <td>0 - Mi primera página web</td>
+                <td><a href="mi primera pagina.html">Mi primera página</a></td>
+            </tr>
+            <tr>
+                <td>1 - Venta de pollos asados</td>
+                <td><a href="pollos.html">Práctica 1</a></td>
+            </tr>
+            <tr>
+                <td>2 - Comida para todos</td>
+                <td><a href="Comida Para Todos.html">Práctica 2</a></td>
+            </tr>
+            <tr>
+                <td>3 - De compas</td>
+                <td><a href="De Compas.html">Práctica 3</a></td>
+            </tr>
+            <tr>
+                <td>4 - Canción Wicked</td>
+                <td><a href="Practica 3 Wicked.html">Práctica 4</a></td>
+            </tr>
+            <tr>
+                <td>5 - Maquillajes Ana y Cleta</td>
+                <td><a href="Maquillajes Ana y Cleta.html">Práctica 5</a></td>
+            </tr>
+            <tr>
+                <td>6 - Día de la mujer</td>
+                <td><a href="Dia de la mujer.html">Práctica 6</a></td>
+            </tr>
+            <tr>
+                <td>7 - Párrafos Vacas</td>
+                <td><a href="Practica 7/Parrafos.html">Práctica 7</a></td>
+            </tr>
+            <tr>
+                <td>8 - Contactos WhatsApp</td>
+                <td><a href="Practica 8/index.html">Práctica 8</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

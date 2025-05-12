@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(135deg, #00c3ff 0%, #ffff1c 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      animation: bgFadeIn 1.2s ease;
+    }
+    @keyframes bgFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .top_title {
+      margin-top: 40px;
+      font-size: 2.8rem;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      animation: slideDown 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-60px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .centered_enphasis {
+      color: #222;
+      background: rgba(255,255,255,0.7);
+      padding: 12px 28px;
+      border-radius: 20px;
+      margin: 18px 0 36px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      animation: fadeIn 1.2s 0.2s backwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.92);
+      border-radius: 22px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+      padding: 32px 38px 28px 38px;
+      margin: 18px 0;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+      animation: cardPop 0.8s;
+    }
+    .contact-card:hover {
+      transform: translateY(-8px) scale(1.03) rotate(-1deg);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    }
+    @keyframes cardPop {
+      from { transform: scale(0.85) translateY(40px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .contact-card p {
+      font-size: 1.18rem;
+      color: #222;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .whatsapp-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.18);
+      color: #fff;
+      font-size: 2.2rem;
+      transition: background 0.3s, transform 0.2s;
+      animation: iconBounce 1.2s infinite alternate;
+      text-decoration: none;
+    }
+    .whatsapp-icon:hover {
+      background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+      transform: scale(1.12) rotate(8deg);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.28);
+    }
+    @keyframes iconBounce {
+      0% { transform: translateY(0);}
+      100% { transform: translateY(-8px);}
+    }
+    .fa-whatsapp {
+      pointer-events: none;
+    }
+    .return-link {
+      margin: 48px 0 24px 0;
+      animation: fadeIn 1.2s 0.5s backwards;
+    }
+    .return-link a {
+      color: #fff;
+      background: #222;
+      padding: 10px 28px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.13);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .return-link a:hover {
+      background: #fff;
+      color: #222;
+      transform: scale(1.06);
+    }
+    @media (max-width: 500px) {
+      .contact-card {
+        width: 90vw;
+        padding: 22px 8vw 18px 8vw;
+      }
+      .top_title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="top_title">Contáctanos</h1>
+  
+  <p class="centered_enphasis">Ponte en contacto con un amigo dando clic en el icono de WhatsApp.</p>
+
+  <div class="contact-card">
+    <p>Contacta a Marcelo</p>
+    <a href="https://wa.me/526673229125?text=Hola Marcelo!" class="whatsapp-icon" title="Enviar mensaje a Marcelo" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div class="contact-card">
+    <p>Contacta a Emmanuel</p>
+    <a href="https://wa.me/526673770609?text=Hola Emmanuel!" class="whatsapp-icon" title="Enviar mensaje a Emmanuel" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <div class="return-link">
+    <a href="index.html">← Regresar a la página principal</a>
+  </div>
+</body>
+</html>

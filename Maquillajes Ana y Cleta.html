@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTRIBUIDORA ANA Y CLETA</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #f08a5d;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #d36c4f;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        header h3 {
+            font-size: 1.6em;
+            font-weight: 300;
+            margin: 5px 0;
+        }
+
+        /* Animación de fadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Contenedor de productos */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Estilo para cada producto */
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h4 {
+            font-size: 1.4em;
+            margin-top: 15px;
+            color: #f08a5d;
+        }
+
+        .product p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        /* Animación de desvanecimiento */
+        .product-description {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .product:hover .product-description {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header h3 {
+                font-size: 1.3em;
+            }
+
+            .product-container {
+                padding: 15px;
+            }
+
+            .product {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>DISTRIBUIDORA ANA Y CLETA</h1>
+        <h3>Beauty Shop | Maquillaje y Cosméticos de Alta Calidad</h3>
+    </header>
+
+    <!-- Sección de productos -->
+    <div class="product-container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img src="images/base.jpg" alt="Maquillaje Base">
+            <h4>Base de Maquillaje Perfecta</h4>
+            <p class="product-description">Nuestra base de maquillaje de larga duración te dará un acabado perfecto durante todo el día. Disponible en varios tonos para todo tipo de piel.</p>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product">
+            <img src="images/sombra_para_ojos.png" alt="Sombra de Ojos">
+            <h4>Sombra de Ojos Deluxe</h4>
+            <p class="product-description">Colores intensos y brillantes para resaltar tu mirada. Fórmula suave que se aplica fácilmente y dura todo el día sin necesidad de retoques.</p>
+        </div>
+        <!-- Producto 3 -->
+        <div class="product">
+            <img src="images/labial_mate.jpg" alt="Labial Mate">
+            <h4>Labial Mate Larga Duración</h4>
+            <p class="product-description">Labial mate que no reseca los labios, con una gama de colores vibrantes que se mantienen intactos por horas.</p>
+        </div>
+        <!-- Producto 4 -->
+        <div class="product">
+            <img src="images/mascara_pestañas.jpg" alt="Máscara de Pestañas">
+            <h4>Máscara de Pestañas Volumen Extremo</h4>
+            <p class="product-description">Obtén un volumen impresionante con solo una capa. Resistente al agua, ideal para el día y la noche.</p>
+        </div>
+        <!-- Producto 5 -->
+        <div class="product">
+            <img src="images/polvo_compacto.png" alt="Polvo Compacto">
+            <h4>Polvo Compacto Matificante</h4>
+            <p class="product-description">Controla el brillo y deja un acabado mate perfecto. Ideal para retoques durante el día.</p>
+        </div>
+        <!-- Producto 6 -->
+        <div class="product">
+            <img src="images/iluminador.jpg" alt="Iluminador">
+            <h4>Iluminador Radiante</h4>
+            <p class="product-description">Añade un toque radiante a tu rostro con nuestro iluminador. Deja una piel luminosa y fresca con un acabado natural.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DISTRIBUIDORA ANA Y CLETA | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
